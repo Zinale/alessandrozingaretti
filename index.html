@@ -16,7 +16,10 @@
     
     <div class="container">
         <h1 class="greeting">Ciao, come va?</h1>
-        <p class="name">Alessandro Zingaretti</p>
+        <p class="name">
+            <span class="name-first">Alessandro</span> 
+            <span class="name-last">Zingaretti</span>
+        </p>
     </div>
 
     <script>
@@ -58,12 +61,14 @@
         });
 
         name.addEventListener('mouseenter', () => {
+            name.classList.add('hover-active');
             name.style.transition = 'all 0.3s ease';
             name.style.letterSpacing = '0.25em';
             name.style.opacity = '1';
         });
 
         name.addEventListener('mouseleave', () => {
+            name.classList.remove('hover-active');
             name.style.letterSpacing = '0.15em';
             name.style.opacity = '0.7';
         });
